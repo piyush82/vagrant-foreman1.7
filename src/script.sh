@@ -30,7 +30,7 @@ cp /tmp/files-to-go/default /var/lib/tftpboot/pxelinux.cfg/
 
 # now downloading the correct discovery images
 echo "Downloading the discovery images now. Please be patient ..."
-wget --timeout=10 --tries=3 --quiet --no-check-certificate -nv -c "http://downloads.theforeman.org/discovery/releases/latest/foreman-discovery-image-3.0.5-20140523.0.el6.iso-vmlinuz" -O "/var/lib/tftpboot/boot/vmlinuz0"
+wget --timeout=10 --tries=3 --quiet --no-check-certificate -nv -c "http://downloads.theforeman.org/discovery/releases/0.5/foreman-discovery-image-3.0.5-20140523.0.el6.iso-vmlinuz" -O "/var/lib/tftpboot/boot/vmlinuz0"
 wget --timeout=10 --tries=3 --quiet --no-check-certificate -nv -c "http://downloads.theforeman.org/discovery/releases/0.5/foreman-discovery-image-3.0.5-20140523.0.el6.iso-img" -O "/var/lib/tftpboot/boot/initrd0.img"
 echo "Now downloading the ubuntu images. Please be patient ..."
 wget --timeout=10 --tries=3 --quiet --no-check-certificate -nv -c "http://archive.ubuntu.com/ubuntu//dists/trusty/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz" -O "/var/lib/tftpboot/boot/Ubuntu-12.04-x86_64-initrd.gz"
